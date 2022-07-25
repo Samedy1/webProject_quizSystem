@@ -12,4 +12,9 @@ class SubjectController extends Controller
 
         return view('subjects.index', ['subjects' => $subjects]);
     }
+
+    public function create() {
+
+        return view('subjects.create');
+    }
 }
