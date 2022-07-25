@@ -19,6 +19,8 @@ class SubjectController extends Controller
     }
 
     public function store(Request $request) {
+        $subject = new Subject();
+        
         if ($request->hasFile('subject_img')) {
             $subject = new Subject();
             $destination_path = "public/img/subjects";
@@ -28,6 +30,7 @@ class SubjectController extends Controller
             $subject->img = $image_name;
         } 
         
+        error_log(request('subject_name'));
 
         $subject->name = request('subject_name');
         $subject->description = request('subject_desc');
