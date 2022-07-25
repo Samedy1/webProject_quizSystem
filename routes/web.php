@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/subjects', [SubjectController::class, 'index']);
 
 Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);
+Route::post('/questions/result', [QuestionController::class, 'result']);
+
