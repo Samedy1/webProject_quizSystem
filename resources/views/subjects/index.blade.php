@@ -11,7 +11,7 @@
                 <div class="box">
                     <img src="{{ $subject->img }}" alt="">
                     <h3>{{ $subject->name }}</h3>
-                    <p>C, C++</p>
+                    <p>{{ $subject->description }}</p>
                     <a href="/questions/{{ $subject->id }}" class="btn">Play Now</a>
                 </div>
             @endforeach
