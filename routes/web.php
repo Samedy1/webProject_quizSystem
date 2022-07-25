@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Route::get('/subjects', [SubjectController::class, 'index']);
 Route::get('/subjects/create', [SubjectController::class, 'create']);
+Route::post('/subjects', [SubjectController::class, 'store']);
+
 
 Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);
 Route::post('/questions/result', [QuestionController::class, 'result']);
