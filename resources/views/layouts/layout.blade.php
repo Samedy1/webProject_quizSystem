@@ -35,7 +35,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/subjects">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
