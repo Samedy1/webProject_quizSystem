@@ -21,6 +21,8 @@ Route::get('/', function () {
 Route::get('/subjects', [SubjectController::class, 'index']);
 Route::get('/subjects/create', [SubjectController::class, 'create']);
 Route::post('/subjects', [SubjectController::class, 'store']);
+Route::get('/subjects/show', [SubjectController::class, 'show']);
+
 
 
 Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);

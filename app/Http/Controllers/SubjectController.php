@@ -38,4 +38,9 @@ class SubjectController extends Controller
         $subject->save();
         return redirect('/subjects');
     }
+
+    public function show() {
+        $subjects = Subject::all();
+        return view('subjects.show', ['subjects' => $subjects]);
+    }
 }

@@ -1,31 +1,30 @@
 @extends('layouts.layout')
 @section('content')
-<div>
-    <h1>Result</h1>
+<div class="">
+    
+    <div class="container">
 
-    <p>Your answer: </p>
-
-    @foreach($selected_choices as $selected_choice)
-        {{ $loop->index + 1 }} {{ $selected_choice }},
-    @endforeach
-
-    <p>Correct answer: </p><br>
-
-    @foreach($correct_options as $correct_option)
-        {{ $loop->index + 1 }} {{ $correct_option }},
-    @endforeach
-
-    @php
-        $score = 0;
-    @endphp
-    @for($i = 0; $i < count($selected_choices); $i++)
-        @if ($selected_choices[$i] == $correct_options[$i])
-            @php
-                $score++;   
-            @endphp
-        @endif
-    @endfor
-
-    <p> Your score: {{ $score }}</p>
+        <h1 class="heading">Subject</h1>
+    
+        <div class="box-container">
+            @foreach ($subjects as $subject)
+                <div class="box">
+                    <img src="/storage/img/subjects/{{ $subject->img }}" alt="">
+                    <h3>{{ $subject->name }}</h3>
+                    <p>{{ $subject->description }}</p>
+                    <form action="" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn">Delete</button>
+                    </form>
+                    <form action="">
+                        @csrf
+                        <button class="btn">Update</button>
+                    </form>
+                </div>
+            @endforeach
+        </div>
+    
+    </div>
 </div>
 @endsection
