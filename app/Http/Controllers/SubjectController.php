@@ -30,6 +30,7 @@ class SubjectController extends Controller
         
 
         $subject->name = request('subject_name');
+        $subject->description = request('subject_desc');
 
         $subject->save();
         return redirect('/subjects');
