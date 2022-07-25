@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/subjects', [SubjectController::class, 'index']);
+
+Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);
