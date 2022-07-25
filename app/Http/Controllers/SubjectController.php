@@ -43,4 +43,10 @@ class SubjectController extends Controller
         $subjects = Subject::all();
         return view('subjects.show', ['subjects' => $subjects]);
     }
+
+    public function destroy($subject_id) {
+        $subject = Subject::FindOrFail($subject_id);
+        $subject->delete();
+        return redirect('/subjects/show');
+    }
 }

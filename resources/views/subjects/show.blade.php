@@ -12,7 +12,7 @@
                     <img src="/storage/img/subjects/{{ $subject->img }}" alt="">
                     <h3>{{ $subject->name }}</h3>
                     <p>{{ $subject->description }}</p>
-                    <form action="" method="POST">
+                    <form action="/subjects/{{ $subject->id }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn">Delete</button>
