@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <title>Dashboard</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/select_sub.css">
+    <link rel="stylesheet" href="/css/settings.css">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/dashboard">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -44,7 +46,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/history/user">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
@@ -62,7 +64,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/settings">
                         <span class="icon">
                             <ion-icon name="settings-outline"></ion-icon>
                         </span>
@@ -103,9 +105,11 @@
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
-
+                <div>
+                    <img src="/storage/img/settings/moon.png" id="icon">
+                </div>
                 <div class="user">
-                    <img src="img/user.png" alt="">
+                    <img src="/storage/img/settings/user.png" alt="">
                 </div>
             </div>
 
@@ -117,6 +121,7 @@
 
     <!-- =========== Scripts =========  -->
     <script src="/js/main.js"></script>
+    {{-- <script src="/js/settings.js"></script> --}}
 
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

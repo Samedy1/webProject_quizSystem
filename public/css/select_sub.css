@@ -5,7 +5,7 @@
 .container .heading{
     text-align: center;
     padding-bottom: 15px;
-    color:crimson;
+    color:var(--crimson);
     text-shadow: 0 5px 10px rgba(253, 253, 253, 0.2);
     font-size: 50px;
 }
@@ -19,7 +19,7 @@
 .container .box-container .box{
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
     border-radius: 30px;
-    background: #fff;
+    background: var(--white1);
     text-align: center;
     padding:30px 20px;
 }
@@ -29,13 +29,13 @@
 }
 
 .container .box-container .box h3{
-    color:#444;
+    color:var(--black1);
     font-size: 22px;
     padding:10px 0;
 }
 
 .container .box-container .box p{
-    color:#777;
+    color:var(--black2);
     font-size: 15px;
     line-height: 1.8;
 }
@@ -43,8 +43,8 @@
     margin-top: 10px;
     display: inline-block;
     /* background:crimson; */
-    border: 2px solid crimson;
-    color:crimson;
+    border: 2px solid var(--crimson);
+    color:var(--crimson);
     font-size: 17px;
     border-radius: 5px;
     padding: 8px 25px;
@@ -53,11 +53,11 @@
 .container .box-container .box .btn:hover{
     letter-spacing: 1px;
     color: white;
-	background-color: crimson;
+	background-color: var(--crimson1);
 }
 
 .container .box-container .box:hover{
-    box-shadow: 0 10px 15px crimson;
+    box-shadow: 0 10px 15px var(--crimson1);
     transform: scale(1.03);
 }
 

@@ -18,6 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+});
+
+
 Route::get('/subjects', [SubjectController::class, 'index']);
 Route::get('/subjects/create', [SubjectController::class, 'create']);
 Route::post('/subjects', [SubjectController::class, 'store']);
@@ -28,4 +35,14 @@ Route::delete('/subjects/{subject_id}', [SubjectController::class, 'destroy']);
 
 Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);
 Route::post('/questions/result', [QuestionController::class, 'result']);
+
+
+Route::get('/settings', function () {
+    return view('settings.index');
+});
+
+
+Route::get('/history/user', function () {
+    return view('history.show');
+});
 
