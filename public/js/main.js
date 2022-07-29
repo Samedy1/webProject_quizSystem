@@ -62,22 +62,15 @@ function getCookie(cname) {
 
 var icon = document.getElementById("icon");
 
-icon.onclick = function(){
-  console.log("hello");
-    document.body.classList.toggle("dark-theme");
-    if(document.body.classList.contains("dark-theme")){
-      icon.src = "/storage/img/settings/sun.png";
-    }else{
-      icon.src = "/storage/img/settings/moon.png";
-      document.body.classList.toggle("dark-theme");
-      if(document.body.classList.contains("dark-theme")){
-          icon.src = "sun.png";
-      }else{
-          icon.src = "moon.png";
-          
-      }
-    }
-  }
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "/storage/img/settings/sun.png";
+            }else{
+                icon.src = "/storage/img/settings/moon.png";
+                
+            }
+        }
 // Colorful
 
 background = getCookie("background");
