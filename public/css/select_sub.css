@@ -1,11 +1,12 @@
-
-
-/* ======================= Cards ====================== */
 /* Select Subject */
 .container .heading{
     text-align: center;
     padding-bottom: 15px;
+<<<<<<< HEAD
     color:var(--crimson);
+=======
+    color:var(--crimson1);
+>>>>>>> f3a1795378900e6dfb09a616e7ed261d9f2eb456
     text-shadow: 0 5px 10px rgba(253, 253, 253, 0.2);
     font-size: 50px;
 }

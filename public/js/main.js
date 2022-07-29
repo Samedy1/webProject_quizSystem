@@ -21,6 +21,7 @@ toggle.onclick = function () {
 };
 
 
+<<<<<<< HEAD
 
 // set the default background color
 background = getCookie("background");
@@ -60,22 +61,33 @@ function getCookie(cname) {
 
 
 
+=======
+>>>>>>> f3a1795378900e6dfb09a616e7ed261d9f2eb456
 // Mode
 
 var icon = document.getElementById("icon");
 
         icon.onclick = function(){
+<<<<<<< HEAD
           console.log("hello");
             document.body.classList.toggle("dark-theme");
             if(document.body.classList.contains("dark-theme")){
                 icon.src = "/storage/img/settings/sun.png";
             }else{
                 icon.src = "/storage/img/settings/moon.png";
+=======
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "sun.png";
+            }else{
+                icon.src = "moon.png";
+>>>>>>> f3a1795378900e6dfb09a616e7ed261d9f2eb456
                 
             }
         }
 // Colorful
 
+<<<<<<< HEAD
 background = getCookie("background");
 console.log(background);
 if (background != "") {
@@ -85,13 +97,20 @@ if (background != "") {
 }
 
 
+=======
+>>>>>>> f3a1795378900e6dfb09a616e7ed261d9f2eb456
 document.querySelectorAll('.theme-colors .color').forEach(color =>{
   color.onclick = () => {
       let background = color.style.background;
       document.querySelector(':root').style.setProperty('--crimson', background);
+<<<<<<< HEAD
       setCookie("background", background, 7);
   }
 });
+=======
+  }
+}); 
+>>>>>>> f3a1795378900e6dfb09a616e7ed261d9f2eb456
 
 let theme = document.querySelector('.themes-container');
 
@@ -103,4 +122,8 @@ document.querySelector('#theme-open').onclick = () =>{
 document.querySelector('#theme-close').onclick = () =>{
   theme.classList.remove('active');
   document.body.style.paddingRight = '0px';
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f3a1795378900e6dfb09a616e7ed261d9f2eb456
