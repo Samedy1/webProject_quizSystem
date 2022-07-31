@@ -1,11 +1,11 @@
-@extends('layouts.layout')
+@extends('admin.layouts.layout')
 @section('content')
 <div class="">
     
     <div class="container">
 
         <h1 class="heading">Create a Subject</h1>
-        <form action="/subjects" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.subjects') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <label for="subject_name">Subject Name</label>
             <input type="text" name="subject_name" id="subject_name" required>

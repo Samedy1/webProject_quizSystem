@@ -25,16 +25,30 @@ Route::get('/dashboard', function () {
 });
 
 
-Route::get('/subjects', [SubjectController::class, 'index']);
-Route::get('/subjects/create', [SubjectController::class, 'create']);
-Route::post('/subjects', [SubjectController::class, 'store']);
-Route::get('/subjects/show', [SubjectController::class, 'show']);
-Route::delete('/subjects/{subject_id}', [SubjectController::class, 'destroy']);
+Route::get('/subjects', [SubjectController::class, 'index'])->name('subjects.index');
+
+
+
+
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard.index');
+})->name('admin.dashboard');
+Route::get('/admin/subjects', [SubjectController::class, 'admin_index'])->name('admin.subjects');
+Route::get('/admin/subjects/create', [SubjectController::class, 'create'])->name('admin.subjects.create');
+Route::post('/admin/subjects', [SubjectController::class, 'store'])->name('admin.subjects.store');
+Route::get('/admin/subjects/show/{subject_id}', [SubjectController::class, 'show'])->name('admin.subjects.show');
+Route::delete('/admin/subjects/{subject_id}', [SubjectController::class, 'destroy'])->name('admin.subjects.destroy');
+
 
 
 
 Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);
 Route::post('/questions/result', [QuestionController::class, 'result']);
+
+Route::get('/admin/questions')->name('admin.questions');
+Route::get('/admin/questions/create/{subject_id}', [QuestionController::class, 'create'])->name('admin.questions.create');
+Route::post('/admin/questions', [QuestionController::class, 'store'])->name('admin.questions.store');
+Route::delete('/admin/questions/{question_id}', [QuestionController::class, 'destroy'])->name('admin.questions.destroy');
 
 
 Route::get('/settings', function () {

@@ -73,14 +73,6 @@ var icon = document.getElementById("icon");
         }
 // Colorful
 
-background = getCookie("background");
-console.log(background);
-if (background != "") {
-  document.querySelector(':root').style.setProperty('--crimson', background);
-} else {
-  document.querySelector(':root').style.setProperty('--crimson', "#f53677");
-}
-
 document.querySelectorAll('.theme-colors .color').forEach(color =>{
   color.onclick = () => {
     let background = color.style.background;

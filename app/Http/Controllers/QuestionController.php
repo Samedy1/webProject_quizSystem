@@ -15,6 +15,25 @@ class QuestionController extends Controller
         return view('questions.index', ['questions' => $questions]);
     }
 
+    public function create($subject_id) {
+        return view('admin.questions.create', ['subject_id' => $subject_id]);
+    }
+
+    public function store() {
+        $question = new Question();
+        
+        $question->question = request('question_name');
+        $question->choices = request('choices');
+        $question->correct_option = request('correct_option');
+        $question->subject_id = request('subject_id');
+
+        $question->save();
+
+
+
+        return redirect('/admin/subjects');
+    }
+
     public function result() {
         $questions = json_decode(request('questions'));
         $selected_choices = [];
@@ -29,5 +48,11 @@ class QuestionController extends Controller
             'selected_choices' => $selected_choices,
             'correct_options' => $correct_options
         ]);
+    }
+
+    public function destroy($question_id) {
+        $question = Question::FindOrFail($question_id);
+        $question->delete();
+        return redirect('admin/subjects');
     }
 }

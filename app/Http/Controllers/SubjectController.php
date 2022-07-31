@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Subject;
+use App\Models\Question;
+use Error;
 
 class SubjectController extends Controller
 {
@@ -13,9 +15,15 @@ class SubjectController extends Controller
         return view('subjects.index', ['subjects' => $subjects]);
     }
 
+    public function admin_index() {
+        $subjects = Subject::all();
+
+        return view('admin.subjects.index', ['subjects' => $subjects]);
+    }
+
     public function create() {
 
-        return view('subjects.create');
+        return view('admin.subjects.create');
     }
 
     public function store(Request $request) {
@@ -36,17 +44,19 @@ class SubjectController extends Controller
         $subject->description = request('subject_desc');
 
         $subject->save();
-        return redirect('/subjects');
+        return redirect('/admin/subjects');
     }
 
-    public function show() {
-        $subjects = Subject::all();
-        return view('subjects.show', ['subjects' => $subjects]);
+    public function show($subject_id) {
+        $subject = Subject::findOrFail($subject_id);
+        $questions = Question::where('subject_id', $subject_id)->get();
+        
+        return view('admin.subjects.show', ['subject' => $subject, 'questions' => $questions]);
     }
 
     public function destroy($subject_id) {
         $subject = Subject::FindOrFail($subject_id);
         $subject->delete();
-        return redirect('/subjects/show');
+        return redirect('admin/subjects');
     }
 }

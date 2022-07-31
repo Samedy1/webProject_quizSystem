@@ -1,10 +1,12 @@
-@extends('layouts.layout')
+@extends('admin.layouts.layout')
 @section('content')
+<!-- ======================= Cards ================== -->
 <div class="">
     
     <div class="container">
 
         <h1 class="heading">Subject</h1>
+        <h3 class="Addsubject"><a href="{{ route('admin.subjects.create') }}" class="btn">Add Subject +</a></h3>
     
         <div class="box-container">
             @foreach ($subjects as $subject)
@@ -12,15 +14,7 @@
                     <img src="/storage/img/subjects/{{ $subject->img }}" alt="">
                     <h3>{{ $subject->name }}</h3>
                     <p>{{ $subject->description }}</p>
-                    <form action="/subjects/{{ $subject->id }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn">Delete</button>
-                    </form>
-                    <form action="">
-                        @csrf
-                        <button class="btn">Update</button>
-                    </form>
+                    <a href="{{ route('admin.subjects.show', $subject->id) }}" class="btn">Edit</a>
                 </div>
             @endforeach
         </div>
