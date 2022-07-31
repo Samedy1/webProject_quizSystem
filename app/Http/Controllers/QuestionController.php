@@ -31,7 +31,7 @@ class QuestionController extends Controller
 
 
 
-        return redirect('/admin/subjects');
+        return redirect("/admin/subjects/show/$question->subject_id");
     }
 
     public function result() {
@@ -53,6 +53,6 @@ class QuestionController extends Controller
     public function destroy($question_id) {
         $question = Question::FindOrFail($question_id);
         $question->delete();
-        return redirect('admin/subjects');
+        return redirect("admin/subjects/show/$question->subject_id");
     }
 }

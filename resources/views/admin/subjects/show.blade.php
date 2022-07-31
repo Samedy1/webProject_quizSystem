@@ -34,9 +34,10 @@
                             <li>{{ $choice }}</li>
                         </ul>
                     @endforeach
-                    <form action="">
+                    <form action="{{ route('admin.questions.destroy', $question->id) }}" method="POST">
+                        @method('DELETE')
                         @csrf
-                        <button>Delete</button>
+                        <button class="btn">Delete</button>
                     </form>
                     <a href="">Update</a>
                 </div>
