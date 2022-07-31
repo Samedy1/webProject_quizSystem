@@ -16,10 +16,7 @@
                     @method('DELETE')
                     <button class="btn">Delete</button>
                 </form>
-                <form action="">
-                    @csrf
-                    <button class="btn">Update</button>
-                </form>
+                <a href="{{ route('admin.subjects.edit', $subject->id) }}" class="btn">Update</a>
                 <a href="{{ route('admin.questions.create', $subject->id) }}" class="btn">Add Questions</a>
             </div>
         </div>
@@ -39,7 +36,7 @@
                         @csrf
                         <button class="btn">Delete</button>
                     </form>
-                    <a href="">Update</a>
+                    <a class="btn" href="{{ route('admin.questions.edit', $question->id) }}">Update</a>
                 </div>
             @endforeach
         </div>

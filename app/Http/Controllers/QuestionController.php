@@ -55,4 +55,20 @@ class QuestionController extends Controller
         $question->delete();
         return redirect("admin/subjects/show/$question->subject_id");
     }
+
+    public function edit($question_id) {
+        $question = Question::findOrFail($question_id);
+        return view('admin.questions.edit', ['question' => $question]);
+    }
+
+    public function update($question_id) {
+        $question = Question::findOrFail($question_id);
+
+        $question->question = request('question_name');
+        $question->choices = request('choices');
+        $question->correct_option = request('correct_option');
+
+        $question->save();
+        return redirect("admin/subjects/show/$question->subject_id");
+    }
 }

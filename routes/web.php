@@ -38,6 +38,8 @@ Route::get('/admin/subjects/create', [SubjectController::class, 'create'])->name
 Route::post('/admin/subjects', [SubjectController::class, 'store'])->name('admin.subjects.store');
 Route::get('/admin/subjects/show/{subject_id}', [SubjectController::class, 'show'])->name('admin.subjects.show');
 Route::delete('/admin/subjects/{subject_id}', [SubjectController::class, 'destroy'])->name('admin.subjects.destroy');
+Route::get('/admin/subjects/edit/{subject_id}', [SubjectController::class, 'edit'])->name('admin.subjects.edit');
+Route::post('/admin/subjects/update/{subject_id}', [SubjectController::class, 'update'])->name('admin.subjects.update');
 
 
 
@@ -49,6 +51,8 @@ Route::get('/admin/questions')->name('admin.questions');
 Route::get('/admin/questions/create/{subject_id}', [QuestionController::class, 'create'])->name('admin.questions.create');
 Route::post('/admin/questions', [QuestionController::class, 'store'])->name('admin.questions.store');
 Route::delete('/admin/questions/{question_id}', [QuestionController::class, 'destroy'])->name('admin.questions.destroy');
+Route::get('/admin/questions/edit/{question_id}', [QuestionController::class, 'edit'])->name('admin.questions.edit');
+Route::post('/admin/questions/update/{question_id}', [QuestionController::class, 'update'])->name('admin.questions.update');
 
 
 Route::get('/settings', function () {

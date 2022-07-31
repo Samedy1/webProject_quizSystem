@@ -59,4 +59,19 @@ class SubjectController extends Controller
         $subject->delete();
         return redirect('admin/subjects');
     }
+
+    public function edit($subject_id) {
+        $subject = Subject::findOrFail($subject_id);
+        return view('admin.subjects.edit', ['subject' => $subject]);
+    }
+
+    public function update($subject_id) {
+        $subject = Subject::findOrFail($subject_id);
+
+        $subject->name = request('subject_name');
+        $subject->description = request('subject_desc');
+
+        $subject->save();
+        return redirect('admin/subjects');
+    }
 }
