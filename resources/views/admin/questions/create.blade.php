@@ -10,15 +10,25 @@
             
             <input type="checkbox" id="subject_id" name="subject_id" checked value="{{ $subject_id }}" style="display:none;">
 
-            <label for="question_name">Question</label>
-            <input type="text" name="question_name" id="question_name" required>
-            <label for="choices" id="add-btn">Add Choices</label><br>
-            <tr><td><input type="text" name="choices[]" id="choices" required></td></tr>
-            <table id="dynamic" cellspacing=0></table>
-            <p id="delete">Delete</p>
-            <label for="correct_option">Correct Option</label>
-            <input type="text" name="correct_option" required>
-            <button>Submit</button>
+            <div class="containBx_Question">
+                <div class="form_QuestionBx">
+                    <div class="inputBx_question">
+                        <label for="question_name">Question</label>
+                        <input type="text" name="question_name" id="question_name" required>
+                    </div>
+                    <div class="inputBx_question">
+                        <label for="choices" id="add-btn">Add Choices</label><br>
+                        <tr><td><input type="text" name="choices[]" id="choices" required></td></tr>
+                    </div>
+                    <div class="inputBx_question">
+                        <label for="correct_option">Correct Option</label>
+                        <input type="text" name="correct_option" required>
+                    </div>
+                    <div class="submit">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
         </form>
     
     </div>

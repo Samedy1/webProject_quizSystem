@@ -9,6 +9,7 @@
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="/admin/css/main.css">
     <link rel="stylesheet" href="/admin/css/subjects.css">
+    <link rel="stylesheet" href="/admin/css/questions.css">
 </head>
 
 <body>
