@@ -1,29 +1,39 @@
 /* Select Subject */
+:root{
+    --blue1:rgb(9, 16, 115);
+    --bluesky:rgb(53, 227, 239);
+    --blue2:rgb(167, 207, 248);
+    --gray1:rgba(253, 253, 253, 0.2);
+}
 .container .heading{
     text-align: center;
-    padding-bottom: 15px;
-    color:rgb(9, 16, 115);
-    text-shadow: 0 5px 10px rgba(253, 253, 253, 0.2);
-    font-size: 50px;
+    color:var(--blue1);
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 0 5px 10px var(--gray1);
     display: grid;
+    letter-spacing: 1px;
 }
 
 .container .Addsubject .btn{
-  margin-left: 30px;
-  margin-bottom:30px ;
+    margin-left: 30px;
+    margin-bottom:30px ;
     display: inline-block;
     /* background:crimson; */
-    border: 2px solid rgb(53, 227, 239);
-    color:rgb(57, 20, 220);
+    border: 2px solid var(--bluesky);
+    color:var(--blue1);
     font-size: 17px;
     border-radius: 5px;
     padding: 8px 25px;
 }
 
 .container .Addsubject .btn:hover{
-  letter-spacing: 1px;
-    color: white;
-	background-color: rgb(27, 146, 182);
+    margin-left: 40px;
+    margin-bottom:40px ;
+    letter-spacing: 1px;
+    color: var(--blue1);
+	background-color: var(--bluesky);
 }
 
 .container .box-container{
@@ -33,9 +43,9 @@
 }
 
 .container .box-container .box{
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px var(black);
     border-radius: 20px;
-    background: rgb(167, 207, 248);
+    background: var(--blue2);
     text-align: center;
     padding:30px 20px;
 }
@@ -59,23 +69,20 @@
 .container .box-container .box .btn{
     margin-top: 10px;
     display: inline-block;
-    /* background:crimson; */
-    border: 2px solid rgb(36, 171, 224);
-    color:rgb(32, 32, 223);
+    border: 2px solid var(--blue1);
+    color:var(--white1);
     font-size: 17px;
     border-radius: 5px;
     padding: 8px 25px;
 }
-
-
 .container .box-container .box .btn:hover{
     letter-spacing: 1px;
-    color: white;
-	background-color: rgb(20, 12, 242);
+    color: var(--blue1);
+	background-color: var(--bluesky);
 }
 
 .container .box-container .box:hover{
-    box-shadow: 0 10px 15px rgb(94, 242, 235);
+    box-shadow: 0 10px 15px var(--bluesky);
     transform: scale(1.03);
 }
 
@@ -84,7 +91,6 @@
         padding:20px;
     }
 }
-
 .create-subject {
     background-color: #f1f1f1;
     padding: 50px;
@@ -116,4 +122,140 @@
     color: #fff;
     border: 0;
     margin-top: 20px;
+}
+/* Add Subject */
+.containBx_subject{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.containBx_subject .form_subjectBx{
+    width: 55%;
+}
+.containBx_subject .form_subjectBx .inputBx_subject_name,
+.containBx_subject .form_subjectBx .inputBx_subject_Image,
+.containBx_subject .form_subjectBx .inputBx_subject_desc{
+    margin-bottom: 20px;
+}
+.containBx_subject .form_subjectBx .inputBx_subject_name label,
+.containBx_subject .form_subjectBx .inputBx_subject_Image label,
+.containBx_subject .form_subjectBx .inputBx_subject_desc label{
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #607d8b;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.containBx_subject .form_subjectBx .inputBx_subject_name input[type="text"]{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+}
+.containBx_subject .form_subjectBx .inputBx_subject_Image input[type="file"]{
+    width: 200px;
+    margin-left: 50px;
+}
+.containBx_subject .form_subjectBx .inputBx_subject_name input[type="text"]:hover,
+.containBx_subject .form_subjectBx .inputBx_subject_desc textarea:hover,
+.containBx_subject .form_subjectBx .inputBx_subject_desc input[type="text"]:hover{
+  border-bottom: 2px solid var(--bluesky);
+}
+.containBx_subject .form_subjectBx .inputBx_subject_desc textarea{
+    width: 100%;
+    padding: 10px 20px;
+    height: 250px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+}
+.containBx_subject .form_subjectBx .inputBx_subject_desc input[type="text"]{
+    width: 100%;
+    padding: 10px 20px;
+    height: 250px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+}
+.containBx_subject .form_subjectBx .submit button{
+    background: var(--blue1);
+    color: #ffffff;
+    outline: none;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 100%;
+}
+.containBx_subject .form_subjectBx .submit button:hover{
+    background: var(--blue1);
+}
+.containBx_subject .form_subjectBx .submit button::after,
+.containBx_subject .form_subjectBx .submit button::before{
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: var(--blue1);
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+.containBx_subject .form_subjectBx .submit button:hover{
+    background-color: var(--blue2);
+    border: 2px solid var(--blue1);
+    transform: translate(-12px, -12px);
+}
+.containBx_subject .form_subjectBx .submit button:hover::after{
+    transform: translate(6px,6px);
+}
+.containBx_subject .form_subjectBx .submit button:hover::before{
+    transform: translate(12px, 12px);
+}
+
+@media (max-width: 768px)
+{
+    .containBx_subject {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+}
+    .containBx_subject .form_subjectBx {
+        width: 100%;
+        padding: 40px;
+        background: rgb(255 255 255 / 90%);
+        margin: 50px;
+    }
+}
+@media (max-width: 800px)
+{
+    .containBx_subject .form_subjectBx .inputBx_subject_Image input[type="file"]{
+        margin-left: 10px;
+    
+    }
 }
