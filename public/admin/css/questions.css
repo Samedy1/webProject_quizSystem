@@ -1,0 +1,149 @@
+/* Add Question */
+:root{
+    --blue1:rgb(9, 16, 115);
+    --bluesky:rgb(53, 227, 239);
+    --blue2:rgb(167, 207, 248);
+    --gray1:rgba(253, 253, 253, 0.2);
+}
+.containBx_Question{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.containBx_Question .form_QuestionBx{
+    width: 55%;
+}
+.containBx_Question .form_QuestionBx .inputBx_question{
+    margin-bottom: 20px;
+}
+.containBx_Question .form_QuestionBx .inputBx_question label{
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #607d8b;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.containBx_Question .form_QuestionBx .inputBx_question input[type="text"]{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid black;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: black;
+    background: transparent;
+}
+.containBx_Question .form_QuestionBx .inputBx_question input[type="text"]:hover{
+  border-bottom: 2px solid var(--bluesky);
+}
+.containBx_Question .form_QuestionBx .submit button{
+    background: var(--blue1);
+    color: #ffffff;
+    outline: none;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 100%;
+}
+.containBx_Question .form_QuestionBx .submit button:hover{
+    background: var(--blue1);
+}
+.containBx_Question .form_QuestionBx .submit button::after,
+.containBx_Question .form_QuestionBx .submit button::before{
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: var(--blue1);
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+.containBx_Question .form_QuestionBx .submit button:hover{
+    background-color: var(--blue2);
+    border: 2px solid var(--bluesky);
+    transform: translate(-12px, -12px);
+}
+.containBx_Question .form_QuestionBx .submit button:hover::after{
+    transform: translate(6px,6px);
+}
+.containBx_Question .form_QuestionBx .submit button:hover::before{
+    transform: translate(12px, 12px);
+}
+
+
+.button{
+  border: none;
+  font-size: 16px;
+  color: var(--white1);
+  padding: 8px 16px;
+  background-color: var(--blue);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.button::after{
+  content: "";
+  position: absolute;
+  border: 2px solid;
+  height: 0%;
+  width: 0%;
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transition: inherit;
+  border-radius: 25px;
+}
+.button::before{
+  content: "";
+  position: absolute;
+  border: 2px solid;
+  height: 0%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  transition: inherit;
+  border-radius: 25px;
+}
+.button:hover:before,.button:hover:after{
+  height: 100%;
+  width: 100%;
+  border: 2px solid;
+  color: var(--blue);
+  border-radius: 25px;
+}
+.button:hover{
+  background: var(--crimson);
+}
+@media (max-width: 768px)
+{
+    .containBx_subject {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+}
+    .containBx_subject .form_QuestionBx {
+        width: 100%;
+        padding: 40px;
+        background: rgb(255 255 255 / 90%);
+        margin: 50px;
+    }
+}
