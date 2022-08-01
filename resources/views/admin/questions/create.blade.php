@@ -19,6 +19,8 @@
                     <div class="inputBx_question">
                         <label for="choices" id="add-btn">Add Choices</label><br>
                         <tr><td><input type="text" name="choices[]" id="choices" required></td></tr>
+                        <table id="dynamic"></table>
+                        <p id="delete">Delete Choice</p>
                     </div>
                     <div class="inputBx_question">
                         <label for="correct_option">Correct Option</label>
