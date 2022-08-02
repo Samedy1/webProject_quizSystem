@@ -62,7 +62,6 @@ Route::middleware([Authenticate::class, Admin::class])->group(function () {
     Route::delete('/admin/questions/{question_id}', [QuestionController::class, 'destroy'])->name('admin.questions.destroy');
     Route::get('/admin/questions/edit/{question_id}', [QuestionController::class, 'edit'])->name('admin.questions.edit');
     Route::post('/admin/questions/update/{question_id}', [QuestionController::class, 'update'])->name('admin.questions.update');
-
 });
 
 
