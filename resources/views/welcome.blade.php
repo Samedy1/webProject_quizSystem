@@ -46,11 +46,11 @@
               <div class="options-container">
                 <div class="option">
                   <input type="radio" class="radio" id="admin" name="category"/>
-                  <label for="admin"><a href="">Register</a></label>
+                  <label for="admin"><a href="{{ route('register') }}">Register</a></label>
                 </div>
                 <div class="option">
                   <input type="radio" class="radio" id="User" name="category" />
-                  <label for="user"><a href="">Login</a></label>
+                  <label for="user"><a href="{{ route('login') }}">Login</a></label>
                 </div>
               </div>
               <div class="selected">
