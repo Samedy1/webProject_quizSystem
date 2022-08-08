@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <div class="setting-box">
-        <img src="/storage/img/settings/user.png">
+        <img src="/img/settings/user.png">
         <input type="file" name="" id="file" accept="image/*">
         <label for="file">Edit Pic</label>
         <input type="text" name="" placeholder="User Name">
