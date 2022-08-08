@@ -39,7 +39,7 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/settings";
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/subjects";
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/questions";
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/history";
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/histories/".i;
 }
 function getCookie(cname) {
   let name = cname + "=";
