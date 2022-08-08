@@ -8,7 +8,7 @@
     
         <div class="box-container">
             <div class="box">
-                <img src="/storage/img/subjects/{{ $subject->img }}" alt="">
+                <img src="/img/subjects/{{ $subject->img }}" alt="">
                 <h3>{{ $subject->name }}</h3>
                 <p>{{ $subject->description }}</p>
                 <form action="{{ route('admin.subjects.destroy', $subject->id) }}" method="POST">

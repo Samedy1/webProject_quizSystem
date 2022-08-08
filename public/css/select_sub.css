@@ -24,6 +24,7 @@
 
 .container .box-container .box img{
     height: 80px;
+    margin: auto;
 }
 
 .container .box-container .box h3{

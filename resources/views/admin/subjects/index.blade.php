@@ -11,7 +11,7 @@
         <div class="box-container">
             @foreach ($subjects as $subject)
                 <div class="box">
-                    <img src="/storage/img/subjects/{{ $subject->img }}" alt="">
+                    <img src="/img/subjects/{{ $subject->img }}" alt="">
                     <h3>{{ $subject->name }}</h3>
                     <p>{{ $subject->description }}</p>
                     <a href="{{ route('admin.subjects.show', $subject->id) }}" class="btn">Edit</a>

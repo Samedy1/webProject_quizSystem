@@ -62,15 +62,6 @@
                         <span class="title">Password</span>
                     </a>
                 </li>
-
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="log-out-outline"></ion-icon>
-                        </span>
-                        <span class="title">Sign Out</span>
-                    </a>
-                </li>
             </ul>
         </div>
 
@@ -89,7 +80,7 @@
                 </div>
 
                 <div class="user">
-                    <img src="img/user.png" alt="">
+                    <img src="/img/user.png" alt="">
                 </div>
 
                 <x-app-layout>

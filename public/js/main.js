@@ -65,9 +65,9 @@ var icon = document.getElementById("icon");
         icon.onclick = function(){
             document.body.classList.toggle("dark-theme");
             if(document.body.classList.contains("dark-theme")){
-                icon.src = "/storage/img/settings/sun.png";
+                icon.src = "/img/settings/sun.png";
             }else{
-                icon.src = "/storage/img/settings/moon.png";
+                icon.src = "/img/settings/moon.png";
                 
             }
         }

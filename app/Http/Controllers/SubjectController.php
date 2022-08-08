@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Subject;
 use App\Models\Question;
-use Error;
+use Illuminate\Support\Facades\File as FacadesFile;
 
 class SubjectController extends Controller
 {
@@ -31,14 +31,14 @@ class SubjectController extends Controller
         
         if ($request->hasFile('subject_img')) {
             $subject = new Subject();
-            $destination_path = "public/img/subjects";
+            $destination_path = public_path()."/img/subjects";
+            // error_log(public_path());
             $image = $request->file('subject_img');
             $image_name = $image->getClientOriginalName();
-            $path = $request->file('subject_img')->storeAs($destination_path, $image_name);
+            // $path = $request->file('subject_img')->storeAs($destination_path, $image_name);
+            $image->move($destination_path, $image_name);
             $subject->img = $image_name;
         } 
-        
-        error_log(request('subject_name'));
 
         $subject->name = request('subject_name');
         $subject->description = request('subject_desc');
@@ -56,6 +56,11 @@ class SubjectController extends Controller
 
     public function destroy($subject_id) {
         $subject = Subject::FindOrFail($subject_id);
+
+        $image_path = public_path()."/img/subjects/".$subject->img;
+        if (FacadesFile::exists($image_path)) {
+            FacadesFile::delete($image_path);
+        }
         $subject->delete();
         return redirect('admin/subjects');
     }

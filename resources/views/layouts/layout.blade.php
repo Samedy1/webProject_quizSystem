@@ -9,8 +9,8 @@
     <title>Quiz System</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/select_sub.css">
     <link rel="stylesheet" href="/css/settings.css">
+    <link rel="stylesheet" href="/css/select_sub.css">
 </head>
 
 <body>
@@ -80,15 +80,6 @@
                         <span class="title">Password</span>
                     </a>
                 </li>
-
-                {{-- <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="log-out-outline"></ion-icon>
-                        </span>
-                        <span class="title">Sign Out</span>
-                    </a>
-                </li> --}}
             </ul>
         </div>
 
@@ -106,7 +97,7 @@
                     </label>
                 </div>
                 <div>
-                    <img src="/storage/img/settings/moon.png" id="icon">
+                    <img src="/img/settings/moon.png" id="icon">
                 </div>
                 {{-- <div class="user">
                     <img src="/storage/img/settings/user.png" alt="">
