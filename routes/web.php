@@ -47,6 +47,8 @@ Route::middleware([Authenticate::class, Admin::class])->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard.index');
     })->name('admin.dashboard');
+
+    
     Route::get('/admin/subjects', [SubjectController::class, 'admin_index'])->name('admin.subjects');
     Route::get('/admin/subjects/create', [SubjectController::class, 'create'])->name('admin.subjects.create');
     Route::post('/admin/subjects', [SubjectController::class, 'store'])->name('admin.subjects.store');
@@ -63,8 +65,6 @@ Route::middleware([Authenticate::class, Admin::class])->group(function () {
     Route::get('/admin/questions/edit/{question_id}', [QuestionController::class, 'edit'])->name('admin.questions.edit');
     Route::post('/admin/questions/update/{question_id}', [QuestionController::class, 'update'])->name('admin.questions.update');
 });
-
-
 
 
 Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);
