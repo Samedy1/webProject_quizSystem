@@ -46,7 +46,7 @@
                 </li>
 
                 <li>
-                    <a href="/history/user">
+                    <a href="{{ route('histories.index', Auth::user()->id ) }}">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>

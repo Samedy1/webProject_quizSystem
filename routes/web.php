@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HistoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\QuestionController;
@@ -77,7 +78,6 @@ Route::get('/settings', function () {
 });
 
 
-Route::get('/history/user', function () {
-    return view('history.show');
-});
+Route::get('/histories/{user_id}', [HistoryController::class, 'index'])->name('histories.index');
+Route::post('/histories/store/{subject_id}/{user_id}', [HistoryController::class, 'store'])->name('histories.store');
 

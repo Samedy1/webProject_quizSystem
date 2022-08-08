@@ -11,18 +11,15 @@ class SubjectController extends Controller
 {
     public function index() {
         $subjects = Subject::all();
-
         return view('subjects.index', ['subjects' => $subjects]);
     }
 
     public function admin_index() {
         $subjects = Subject::all();
-
         return view('admin.subjects.index', ['subjects' => $subjects]);
     }
 
     public function create() {
-
         return view('admin.subjects.create');
     }
 

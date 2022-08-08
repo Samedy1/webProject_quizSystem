@@ -26,6 +26,10 @@
         @endif
     @endfor
 
-    <p> Your score: {{ $score }}</p>
+    <p>{{ Auth::user()->name}} Your score: {{ $score }}</p>
+
+    <form action="{{ route('history.store', ['score' => $score]) }}">
+        
+    </form>
 </div>
 @endsection
