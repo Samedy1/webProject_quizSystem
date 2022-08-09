@@ -3,7 +3,6 @@
     text-align: center;
     padding-bottom: 15px;
     color:var(--crimson);
-    color:var(--crimson1);
     text-shadow: 0 5px 10px rgba(253, 253, 253, 0.2);
     font-size: 50px;
 }
@@ -52,11 +51,11 @@
 .container .box-container .box .btn:hover{
     letter-spacing: 1px;
     color: white;
-	background-color: var(--crimson1);
+	background-color: var(--crimson);
 }
 
 .container .box-container .box:hover{
-    box-shadow: 0 10px 15px var(--crimson1);
+    box-shadow: 0 10px 15px var(--crimson);
     transform: scale(1.03);
 }
 
