@@ -16,7 +16,8 @@
 .containBx_Question .form_QuestionBx{
     width: 55%;
 }
-.containBx_Question .form_QuestionBx .inputBx_question{
+.containBx_Question .form_QuestionBx .inputBx_question,
+.containBx_Question .form_QuestionBx .inputBx_question-add{
     margin-bottom: 20px;
 }
 .containBx_Question .form_QuestionBx .inputBx_question label{
@@ -27,7 +28,41 @@
     font-weight: 300;
     letter-spacing: 1px;
 }
-.containBx_Question .form_QuestionBx .inputBx_question input[type="text"]{
+.containBx_Question .form_QuestionBx .inputBx_question-add label{
+    margin-bottom: 5px;
+    display: inline-block;
+    color: var(--blue1);
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 3px;
+    border: 1px solid var(--blue1);
+    background-color: var(--bluesky);
+}
+.containBx_Question .form_QuestionBx .inputBx_question-add label:hover{
+    background-color: var(--blue1);
+    color: wheat;
+    margin-bottom: 10px;
+}
+.containBx_Question .form_QuestionBx .inputBx_question-add p{
+    margin-bottom: 5px;
+    display: inline-block;
+    color: var(--blue1);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 3px;
+    background-color: red;
+    margin-left: 80%;
+    color: white;
+}
+.containBx_Question .form_QuestionBx .inputBx_question-add p:hover{
+    background-color:rgb(127, 5, 5);
+    color: wheat;
+    padding: 3px;
+}
+.containBx_Question .form_QuestionBx .inputBx_question input[type="text"],
+.containBx_Question .form_QuestionBx .inputBx_question-add input[type="text"]{
     width: 100%;
     padding: 10px 20px;
     outline: none;
@@ -38,7 +73,8 @@
     color: black;
     background: transparent;
 }
-.containBx_Question .form_QuestionBx .inputBx_question input[type="text"]:hover{
+.containBx_Question .form_QuestionBx .inputBx_question input[type="text"]:hover,
+.containBx_Question .form_QuestionBx .inputBx_question-add input[type="text"]:hover{
   border-bottom: 2px solid var(--bluesky);
 }
 .containBx_Question .form_QuestionBx .submit button{

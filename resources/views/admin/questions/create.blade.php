@@ -16,7 +16,7 @@
                         <label for="question_name">Question</label>
                         <input type="text" name="question_name" id="question_name" required>
                     </div>
-                    <div class="inputBx_question">
+                    <div class="inputBx_question-add">
                         <label for="choices" id="add-btn">Add Choices</label><br>
                         <tr><td><input type="text" name="choices[]" id="choices" required></td></tr>
                         <table id="dynamic"></table>
@@ -37,7 +37,7 @@
     <script>
         document.getElementById("add-btn").onclick = function () {
              document.getElementById("dynamic").insertRow().innerHTML = "<input type=\"text\" name=\"choices[]\" required>";
-             document.getElementById("delete").innerHTML = "Delete"; 
+             document.getElementById("delete").innerHTML = "Delete Choice"; 
          };
  
          var rowCount = document.getElementById("dynamic").rows.length;
