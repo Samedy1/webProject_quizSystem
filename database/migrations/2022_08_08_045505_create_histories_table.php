@@ -19,6 +19,8 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('subject');
             $table->double('score', 5, 2);
+            $table->json('questions');
+            $table->json('selected_choices');
         });
     }
 
