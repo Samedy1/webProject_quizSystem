@@ -19,12 +19,12 @@
                     <td>{{ $history->subject }}</td>
                     <td>{{ $history->score}}</td>
                     <td>{{ $history->created_at}}</td>
-                    <td><a class="text-primary" href="">See more...</a></td>
+                    <td><a class="text-primary" href="{{ route('histories.show', [Auth::user()->id, $history->id]) }}">See more...</a></td>
                 </tr>
             @endforeach
             </tbody>
           </table>
-          <button class="btn bg-primary text-white">Clear History</button>
+          <button class="btn bg-danger text-white">Clear History</button>
     </div>
 
 @endsection
