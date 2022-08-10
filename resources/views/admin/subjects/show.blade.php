@@ -22,21 +22,28 @@
         </div>
 
         <div class="question-list">
-            <h1>Questions</h1>
+            <h1 class="heading">Questions</h1>
             @foreach($questions as $question)
                 <div class="question-item">
-                    <p>{{ $loop->index + 1 }} - {{ $question->question }}</p>
+                    <div class="question-header">
+                        <div class="question-overlay">
+                            <p>{{ $loop->index + 1 }} - {{ $question->question }}</p>
+                        </div>
+                    </div>
                     @foreach($question->choices as $choice)
+                    <div class="question-choice">
                         <ul>
                             <li>{{ $choice }}</li>
                         </ul>
+                    </div>
                     @endforeach
                     <form action="{{ route('admin.questions.destroy', $question->id) }}" method="POST">
                         @method('DELETE')
                         @csrf
-                        <button class="btn">Delete</button>
+                        <a class="btn-question-update" href="{{ route('admin.questions.edit', $question->id) }}">Update</a>
+                        <button class="btn-question-delete">Delete</button>
                     </form>
-                    <a class="btn" href="{{ route('admin.questions.edit', $question->id) }}">Update</a>
+                    </div>
                 </div>
             @endforeach
         </div>
