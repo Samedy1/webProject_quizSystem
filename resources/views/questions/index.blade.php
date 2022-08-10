@@ -6,7 +6,6 @@
         @csrf
         {{-- send questions to the controller for handling the attribute like id, correct option --}}
         <input type="checkbox" id="questions" name="questions" checked value="{{ $info['questions'] }}" style="display:none;">
-        <h1 class="heading">Questions</h1>
         <div class="question-user-item">
             @foreach($info['questions'] as $question)
                 <div class="wrapper-cut">
