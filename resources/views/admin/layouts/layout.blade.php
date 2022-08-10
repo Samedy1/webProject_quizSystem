@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Quiz System Admin</title>
     <!-- ======= Styles ====== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="/admin/css/main.css">
@@ -28,14 +28,14 @@
                     </a>
                 </li>
 
-                <li>
+                {{-- <li>
                     <a href="{{ route('admin.dashboard') }}">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
                         <span class="title">Dashboard</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li>
                     <a href="{{ route('admin.users') }}">
@@ -51,7 +51,7 @@
                         <span class="icon">
                             <ion-icon name="help-outline"></ion-icon>
                         </span>
-                        <span class="title">Manage Subject&Question</span>
+                        <span class="title">Subjects & Questions</span>
                     </a>
                 </li>
 
@@ -76,7 +76,7 @@
                 <div class="search">
                     <label>
                         <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline"></ion-icon>
+                        {{-- <ion-icon name="search-outline"></ion-icon> --}}
                     </label>
                 </div>
 

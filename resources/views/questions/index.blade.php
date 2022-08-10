@@ -9,9 +9,9 @@
         <div class="question-user-item">
             @foreach($info['questions'] as $question)
                 <div class="wrapper-cut">
-                    <div class="title-user-question">{{ $question->question}}</div>
+                    <div class="title-user-question p-4">{{ $question->question}}</div>
                     @foreach($question->choices as $choice)
-                    <div class="question-user-choice">
+                    <div class="question-user-choice p-4">
                         <input type="radio" id="{{ $question->id }}-{{ $choice }}" name="selected_choice{{$question->id}}" value="{{ $choice }}" required>
                         <label for="{{ $question->id }}-{{ $choice }}">{{ $choice }} - selected_choice{{$question->id}}</label><br>
                     </div>

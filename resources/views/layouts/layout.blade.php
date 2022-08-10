@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <title>Quiz System</title>
     <!-- ======= Styles ====== -->
@@ -28,12 +27,12 @@
                 </a>
             </li>
 
-            <li>
+            {{-- <li>
                 <a href="/dashboard">
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                     <span class="title">Dashboard</span>
                 </a>
-            </li>
+            </li> --}}
 
             <li>
                 <a href="{{ route('subjects.index') }}">
@@ -49,12 +48,12 @@
                 </a>
             </li>
 
-            <li>
+            {{-- <li>
                 <a href="#">
                     <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
                     <span class="title">Help</span>
                 </a>
-            </li>
+            </li> --}}
 
             <li>
                 <a href="/settings">
@@ -84,9 +83,6 @@
                     <input type="text" placeholder="Search here">
                     {{-- <ion-icon name="search-outline"></ion-icon> --}}
                 </label>
-            </div>
-            <div>
-                <img src="/img/settings/moon.png" id="icon">
             </div>
             {{-- <div class="user">
                 <img src="/storage/img/settings/user.png" alt="">

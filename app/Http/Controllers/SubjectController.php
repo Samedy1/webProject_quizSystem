@@ -58,6 +58,13 @@ class SubjectController extends Controller
         if (FacadesFile::exists($image_path)) {
             FacadesFile::delete($image_path);
         }
+
+        $questions = Question::where('subject_id', $subject_id)->get();
+
+        foreach($questions as $question) {
+            $question->delete();
+        }
+
         $subject->delete();
         return redirect('admin/subjects');
     }

@@ -5,11 +5,7 @@
         <input type="file" name="" id="file" accept="image/*">
         <label for="file">Edit Pic</label>
         <input type="text" name="" placeholder="User Name">
-        <input type="email" name="" placeholder="Email ID">
-        <input type="text" name="" placeholder="Phone Numer">
-        <!-- <input type="text" name="" placeholder="Date of Birth"> -->
-        <input type="date" name="" placeholder="Date of Birth">
-        <input type="text" name="" placeholder="Gender">
+        <input type="email" name="" placeholder="Email Address">
         <button style="float: left; margin: 10px 30px 10px 0">CANCEL</button>
         <button style="float: left; margin: 10px 0 10px 130px">DONE</button>
     </div>

@@ -8,7 +8,7 @@
 
         <table class="table table-striped m-auto">
             <thead>
-              <tr>
+              <tr class="bg-primary text-white">
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>

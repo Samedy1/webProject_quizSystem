@@ -70,7 +70,7 @@ body {
   background: var(--crimson);
   border-left: 10px solid var(--crimson);
   transition: 0.5s;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .navigation.active {
   width: 80px;

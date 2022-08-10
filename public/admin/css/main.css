@@ -2,7 +2,8 @@
     padding: 20px;
 }
 .question-list {
-  background-color: #ddd;
+  background-color: #eee;
+  box-shadow: 0 2px 5px grey;
   padding: 20px;
   border-radius: 10px;
   margin-top: 35px;
@@ -108,7 +109,7 @@ body {
   background: var(--crimson);
   border-left: 10px solid var(--crimson);
   transition: 0.5s;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .navigation.active {
   width: 80px;

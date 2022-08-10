@@ -5,11 +5,12 @@
 
         <table class="table table-striped">
             <thead>
-              <tr>
+              <tr class="bg-primary text-white">
                 <th scope="col">#</th>
                 <th scope="col">Subject</th>
                 <th scope="col">Score</th>
                 <th scope="col">Date</th>
+                <th scope="col" colspan="2"></th>
               </tr>
             </thead>
             <tbody>

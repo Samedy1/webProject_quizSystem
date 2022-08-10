@@ -71,15 +71,18 @@ Route::middleware([Authenticate::class, Admin::class])->group(function () {
     Route::post('/admin/questions/update/{question_id}', [QuestionController::class, 'update'])->name('admin.questions.update');
 });
 
+Route::middleware([Authenticate::class])->group(function () {
+
+    Route::get('/settings', function () {
+        return view('settings.index');
+    });
+});
 
 Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);
 Route::post('/questions/result', [QuestionController::class, 'result']);
 
 
 
-Route::get('/settings', function () {
-    return view('settings.index');
-});
 
 
 Route::get('/histories/{user_id}', [HistoryController::class, 'index'])->name('histories.index');
