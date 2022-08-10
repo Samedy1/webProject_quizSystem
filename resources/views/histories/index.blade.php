@@ -20,11 +20,23 @@
                     <td>{{ $history->score}}</td>
                     <td>{{ $history->created_at}}</td>
                     <td><a class="text-primary" href="{{ route('histories.show', [Auth::user()->id, $history->id]) }}">See more...</a></td>
+                    <td>
+                      <form action="{{ route('histories.destroy', [Auth::user()->id, $history->id]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="text-danger" onclick="return confirm('Are you sure?')">Delete...</button>
+                      </form>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
           </table>
-          <button class="btn bg-danger text-white">Clear History</button>
+          <form action="{{ route('histories.clear', Auth::user()->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="btn bg-danger text-white" onclick="return confirm('Are you sure?')">Clear History</button>
+
+          </form>
     </div>
 
 @endsection

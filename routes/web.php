@@ -81,3 +81,5 @@ Route::get('/settings', function () {
 Route::get('/histories/{user_id}', [HistoryController::class, 'index'])->name('histories.index');
 Route::post('/histories/store/{subject_id}/{user_id}', [HistoryController::class, 'store'])->name('histories.store');
 Route::get('/histories/{user_id}/show/{history_id}', [HistoryController::class, 'show'])->name('histories.show');
+Route::delete('/histories/{user_id}/destroy/{history_id}', [HistoryController::class, 'destroy'])->name('histories.destroy');
+Route::delete('/histories/{user_id}/clear', [HistoryController::class, 'clear'])->name('histories.clear');

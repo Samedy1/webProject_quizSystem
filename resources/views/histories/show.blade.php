@@ -14,6 +14,5 @@
         <div>
             Your score: {{ $info['history']->score }}
         </div>
-        <p class="btn bg-danger text-white">Clear</p>
     </div>
 @endsection

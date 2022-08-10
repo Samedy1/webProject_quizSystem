@@ -10,8 +10,16 @@
     background: #5e2195;
 }
 
-.bg-submit:hover {
+.btn-submit {
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: #5e2195;
+    color: white;
+}
+
+.btn-submit:hover {
     background: #5e2195;
+    transform: scale(0.9);
 }
 /* .containBx_Question{
     display: flex;

@@ -31,7 +31,7 @@
                     <input type="text" class="form-control rounded" name="correct_option" value="{{ $question->correct_option }}" required>
                     </div>
                 <div class="form-group mt-4">
-                    <button class="btn bg-submit text-white">Update</button>
+                    <button class="btn bg-submit text-white" onclick="return confirm('Are you sure?')">Update</button>
                 </div>
         </div>
     </form>

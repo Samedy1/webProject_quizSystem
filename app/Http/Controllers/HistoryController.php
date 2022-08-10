@@ -20,7 +20,7 @@ class HistoryController extends Controller
         $questions = [];
 
         foreach ($history->questions as $question_id) {
-            $question = Question::find($question_id);
+            $question = Question::findOrFail($question_id);
             $questions[] = $question;
         }
 
@@ -63,5 +63,21 @@ class HistoryController extends Controller
         $history->save();
 
         return redirect("/histories/$user_id/show/$history->id");
+    }
+
+    public function destroy($user_id, $history_id) {
+        $history = History::findOrFail($history_id);
+        $history->delete();
+
+        return redirect("/histories/$user_id");
+    }
+
+    public function clear($user_id) {
+        $histories = History::where('user_id', $user_id)->get();
+        foreach($histories as $history) {
+            $history->delete();
+        }
+
+        return redirect("/histories/$user_id");
     }
 }

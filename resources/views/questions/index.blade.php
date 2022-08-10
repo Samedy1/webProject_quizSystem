@@ -18,7 +18,7 @@
                     @endforeach
                 </div>
             @endforeach
-            <button class="btn-question-submit">Submit</button>
+            <button class="btn-question-submit" onclick="return confirm('Are you sure?')">Submit</button>
         </div>
     </form>
 </div>

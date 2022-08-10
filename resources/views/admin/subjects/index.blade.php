@@ -14,7 +14,7 @@
                     <img src="/img/subjects/{{ $subject->img }}" alt="">
                     <h3>{{ $subject->name }}</h3>
                     <p>{{ $subject->description }}</p>
-                    <a href="{{ route('admin.subjects.show', $subject->id) }}" class="btn">Edit</a>
+                    <a href="{{ route('admin.subjects.show', $subject->id) }}" class="btn">Details</a>
                 </div>
             @endforeach
         </div>

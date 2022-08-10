@@ -29,7 +29,7 @@
                     <input type="text" class="form-control rounded" name="correct_option" placeholder="Enter the correct choice" required>
                 </div>
                 <div class="form-group mt-4">
-                    <button class="btn bg-submit text-white">Submit</button>
+                    <button class="btn-submit" onclick="return confirm('Are you sure?')">Submit</button>
                 </div>
             </div>
 
