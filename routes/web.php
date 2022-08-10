@@ -4,6 +4,7 @@ use App\Http\Controllers\HistoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\Admin;
 use App\Http\Middleware\Authenticate;
 
@@ -48,6 +49,9 @@ Route::middleware([Authenticate::class, Admin::class])->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard.index');
     })->name('admin.dashboard');
+
+
+    Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users');
 
     
     Route::get('/admin/subjects', [SubjectController::class, 'admin_index'])->name('admin.subjects');

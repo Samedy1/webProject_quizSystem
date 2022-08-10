@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="history wrapper">
-        <h1 class="mb-5 h1">History of {{ Auth::user()->name }}</h1>
+    <div class="container">
+        <h2 class="mb-5 heading">History of {{ Auth::user()->name }}</h2>
 
         <table class="table table-striped">
             <thead>
