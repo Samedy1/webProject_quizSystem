@@ -303,7 +303,7 @@ p {
   }
   .selected::after {
 	content: "";
-	background: url("public/img/welcome/arrow-down.svg");
+	background: url("arrow-down.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;
