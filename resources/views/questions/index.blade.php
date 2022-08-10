@@ -6,19 +6,21 @@
         @csrf
         {{-- send questions to the controller for handling the attribute like id, correct option --}}
         <input type="checkbox" id="questions" name="questions" checked value="{{ $info['questions'] }}" style="display:none;">
-        <h1>Questions</h1>
-        <div>
+        <h1 class="heading">Questions</h1>
+        <div class="question-user-item">
             @foreach($info['questions'] as $question)
-                <div class="wrapper bd-r-10 box-shadow">
-                    <div class="title">{{ $question->question}}</div>
+                <div class="wrapper-cut">
+                    <div class="title-user-question">{{ $question->question}}</div>
                     @foreach($question->choices as $choice)
+                    <div class="question-user-choice">
                         <input type="radio" id="{{ $question->id }}-{{ $choice }}" name="selected_choice{{$question->id}}" value="{{ $choice }}" required>
                         <label for="{{ $question->id }}-{{ $choice }}">{{ $choice }} - selected_choice{{$question->id}}</label><br>
+                    </div>
                     @endforeach
                 </div>
             @endforeach
+            <button>Submit</button>
         </div>
-        <button>Submit</button>
     </form>
 </div>
 @endsection
