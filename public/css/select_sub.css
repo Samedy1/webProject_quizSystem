@@ -2,9 +2,7 @@
 .container .heading{
     text-align: center;
     padding-bottom: 15px;
-    color:gray;
-    color:rgb(145, 140, 140);
-    text-shadow: 0 5px 10px var(--crimson);
+    color: var(--crimson);
     font-size: 50px;
 }
 
@@ -24,6 +22,7 @@
 
 .container .box-container .box img{
     height: 80px;
+    margin: auto;
 }
 
 .container .box-container .box h3{
