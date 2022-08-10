@@ -19,7 +19,7 @@
                     @endforeach
                 </div>
             @endforeach
-            <button>Submit</button>
+            <button class="btn-question-submit">Submit</button>
         </div>
     </form>
 </div>
