@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <!-- ======= Styles ====== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="/admin/css/main.css">
     <link rel="stylesheet" href="/admin/css/subjects.css">
     <link rel="stylesheet" href="/admin/css/questions.css">
@@ -163,9 +164,8 @@
             <div class="wrapper">
                 @yield('content')
             </div>
-            
-
-    <!-- =========== Scripts =========  -->
+        </div>
+            <!-- =========== Scripts =========  -->
     <script src="/admin/js/main.js"></script>
 
     <!-- ====== ionicons ======= -->

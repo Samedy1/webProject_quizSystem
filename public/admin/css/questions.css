@@ -5,7 +5,15 @@
     --blue2:rgb(167, 207, 248);
     --gray1:rgba(253, 253, 253, 0.2);
 }
-.containBx_Question{
+
+.bg-submit {
+    background: #5e2195;
+}
+
+.bg-submit:hover {
+    background: #5e2195;
+}
+/* .containBx_Question{
     display: flex;
     width: 100%;
     height: 100%;
@@ -19,8 +27,8 @@
 .containBx_Question .form_QuestionBx .inputBx_question,
 .containBx_Question .form_QuestionBx .inputBx_question-add{
     margin-bottom: 20px;
-}
-.containBx_Question .form_QuestionBx .inputBx_question label{
+} */
+/* .containBx_Question .form_QuestionBx .inputBx_question label{
     margin-bottom: 5px;
     display: inline-block;
     color: #607d8b;
@@ -28,7 +36,7 @@
     font-weight: 300;
     letter-spacing: 1px;
 }
-.containBx_Question .form_QuestionBx .inputBx_question-add label{
+.containBx_Question .form_QuestionBx .inputBx_question-add #add-btn{
     margin-bottom: 5px;
     display: inline-block;
     color: var(--blue1);
@@ -39,7 +47,7 @@
     border: 1px solid var(--blue1);
     background-color: var(--bluesky);
 }
-.containBx_Question .form_QuestionBx .inputBx_question-add label:hover{
+.containBx_Question .form_QuestionBx .inputBx_question-add #add-btn:hover{
     background-color: var(--blue1);
     color: wheat;
     margin-bottom: 10px;
@@ -60,8 +68,10 @@
     background-color:rgb(127, 5, 5);
     color: wheat;
     padding: 3px;
-}
-.containBx_Question .form_QuestionBx .inputBx_question input[type="text"],
+} */
+
+
+/* .containBx_Question .form_QuestionBx .inputBx_question input[type="text"],
 .containBx_Question .form_QuestionBx .inputBx_question-add input[type="text"]{
     width: 100%;
     padding: 10px 20px;
@@ -116,10 +126,10 @@
 }
 .containBx_Question .form_QuestionBx .submit button:hover::before{
     transform: translate(12px, 12px);
-}
+} */
 
 
-.button{
+/* .button{
   border: none;
   font-size: 16px;
   color: var(--white1);
@@ -182,4 +192,4 @@
         background: rgb(255 255 255 / 90%);
         margin: 50px;
     }
-}
+} */

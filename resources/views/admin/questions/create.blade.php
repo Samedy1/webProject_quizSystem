@@ -5,39 +5,41 @@
     <div class="container">
 
         <h1 class="heading">Create a Question</h1>
-        <form class="question-form" action="{{ route('admin.questions') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.questions') }}" method="POST" enctype="multipart/form-data">
             @csrf
             
             <input type="checkbox" id="subject_id" name="subject_id" checked value="{{ $subject_id }}" style="display:none;">
 
-            <div class="containBx_Question">
-                <div class="form_QuestionBx">
-                    <div class="inputBx_question">
-                        <label for="question_name">Question</label>
-                        <input type="text" name="question_name" id="question_name" required>
-                    </div>
-                    <div class="inputBx_question-add">
-                        <label for="choices" id="add-btn">Add Choices</label><br>
-                        <tr><td><input type="text" name="choices[]" id="choices" required></td></tr>
-                        <table id="dynamic"></table>
-                        <p id="delete">Delete Choice</p>
-                    </div>
-                    <div class="inputBx_question">
-                        <label for="correct_option">Correct Option</label>
-                        <input type="text" name="correct_option" required>
-                    </div>
-                    <div class="submit">
-                        <button>Submit</button>
+            <div class="bg-gray-100 w-75 m-auto p-5 rounded">
+                <div class="form-group mb-4">
+                    <label for="question_name" class="form-label text-lg">Question</label>
+                    <input type="text" class="form-control rounded" name="question_name" id="question_name" placeholder="Enter a question" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="choices" class="form-label text-lg">Choices</label>
+                    <table><tr><td><input type="text" class="form-control rounded mb-2" name="choices[]" id="choices" placeholder="Enter a choice" required></td></tr></table>
+                    <table id="dynamic"></table>
+                    <div class="mt-2">
+                        <div id="add-btn" class="btn bg-primary text-white">Add</div>
+                        <div id="delete" class="btn bg-danger text-white">Delete</div>
                     </div>
                 </div>
+                <div class="form-group mb-4">
+                    <label for="correct_option" class="form-label text-lg">Correct Option</label>
+                    <input type="text" class="form-control rounded" name="correct_option" placeholder="Enter the correct choice" required>
+                </div>
+                <div class="form-group mt-4">
+                    <button class="btn bg-submit text-white">Submit</button>
+                </div>
             </div>
+
         </form>
     
     </div>
     <script>
         document.getElementById("add-btn").onclick = function () {
-             document.getElementById("dynamic").insertRow().innerHTML = "<input type=\"text\" name=\"choices[]\" required>";
-             document.getElementById("delete").innerHTML = "Delete Choice"; 
+             document.getElementById("dynamic").insertRow().innerHTML = "<input type=\"text\" class=\"form-control rounded mb-2\" name=\"choices[]\" placeholder=\"Enter a choice\" required>";
+             document.getElementById("delete").innerHTML = "Delete"; 
          };
  
          var rowCount = document.getElementById("dynamic").rows.length;
