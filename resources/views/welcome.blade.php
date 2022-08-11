@@ -142,7 +142,7 @@
         <div class="col">
           <div class="about-img">
             <div class="item">
-              <img src="/img/team/samdy.jpg" alt="img">
+              <img src="/img//welcome/team/samdy.jpg" alt="img">
               <div class="inner">
                 <div class="info">
                     <h5>Phin Samdy</h5>
@@ -161,7 +161,7 @@
         <div class="col">
           <div class="about-img">
             <div class="item">
-              <img src="/img/team/sonai.jpg" alt="img">
+              <img src="/img/welcome/team/sonai.jpg" alt="img">
               <div class="inner">
                 <div class="info">
                     <h5>Kuy Sonai</h5>
@@ -180,7 +180,7 @@
         <div class="col">
           <div class="about-img">
             <div class="item">
-              <img src="/img/team/kanha.jpg" alt="img">
+              <img src="/img/welcome/team/kanha.jpg" alt="img">
               <div class="inner">
                 <div class="info">
                     <h5>Nov SOvankanha</h5>
