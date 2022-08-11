@@ -295,6 +295,117 @@ class QuestionsTableSeeder extends Seeder
                 'correct_option' => 'async',
                 'subject_id' => 3,
             ],
+            [
+                'question' => 'Software is defined as ',
+                'choices' => [
+                    'set of programs, documentation & configuration of data',
+                    'set of programs',
+                    'documentation and configuration of data',
+                    'None of the mentioned',
+                ],
+                'correct_option' => 'set of programs, documentation & configuration of data',
+                'subject_id' => 4,
+            ],
+            [
+                'question' => 'What is Software Engineering?',
+                'choices' => [
+                    'Designing a software',
+                    'Testing a software',
+                    'Application of engineering principles to the design a software',
+                    'None of the above',
+                ],
+                'correct_option' => 'Application of engineering principles to the design a software',
+                'subject_id' => 4,
+            ],
+            [
+                'question' => 'Who is the father of Software Engineering?',
+                'choices' => [
+                    'Margaret Hamilton',
+                    'Watts S. Humphrey',
+                    'Alan Turing',
+                    'Boris Beizer'
+                ],
+                'correct_option' => 'Watts S. Humphrey',
+                'subject_id' => 4,
+            ],
+            [
+                'question' => 'What are the features of Software Code?',
+                'choices' => [
+                    'Simplicity',
+                    'Accessibility',
+                    'Modularity',
+                    'All of the above'
+                ],
+                'correct_option' => 'Modularity',
+                'subject_id' => 4,
+            ],
+            [
+                'question' => '______ is a software development activity that is not a part of software processes.',
+                'choices' => [
+                    'Validation',
+                    'Specification',
+                    'Development',
+                    'Dependence',
+                ],
+                'correct_option' => 'Dependence',
+                'subject_id' => 4,
+            ],
+            [
+                'question' => 'every computer looking to access the Internet would be known as this',
+                'choices' => [
+                    'client',
+                    'desktop',
+                    'hub',
+                    'server',
+                ],
+                'correct_option' => 'client',
+                'subject_id' => 5,
+            ],
+            [
+                'question' => 'network that allows information to be shared between devices over LAN',
+                'choices' => [
+                    'wifi',
+                    'hotspots',
+                    'ethernet',
+                    'server',
+                ],
+                'correct_option' => 'ethernet',
+                'subject_id' => 5,
+            ],
+            [
+                'question' => 'the acronym for file transfer protocol
+                ',
+                'choices' => [
+                    'http',
+                    'https',
+                    'ftp',
+                    'pdf',
+                ],
+                'correct_option' => 'ftp',
+                'subject_id' => 5,
+            ],
+            [
+                'question' => 'many businesses use this Wi-Fi technology to allow the public an access point to a wireless network',
+                'choices' => [
+                    'hotspots',
+                    'coldspot',
+                    'satellites',
+                    'bluetooth',
+                ],
+                'correct_option' => 'hotspots',
+                'subject_id' => 5,
+            ],
+            [
+                'question' => 'used for government sites ',
+                'choices' => [
+                    '.edu',
+                    '.gov',
+                    '.com',
+                    '.net',
+                ],
+                'correct_option' => '.gov',
+                'subject_id' => 5,
+            ],
 
 
 
