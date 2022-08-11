@@ -245,6 +245,58 @@ class QuestionsTableSeeder extends Seeder
                 'correct_option' => '<ul>',
                 'subject_id' => 2,
             ],
+            [
+                'question' => 'Which syntax is wrong for initializing a List in Dart?',
+                'choices' => [
+                    'List<dynamic> x = [1, true, 2.5, Text(“Hello”)];',
+                    'List x = [1, true, 2.5, Text(“Hello”)];',
+                    'List<Widget> x = [1, true, 2.5, Text(“Hello”)];',
+                ],
+                'correct_option' => 'List<Widget> x = [1, true, 2.5, Text(“Hello”)];',
+                'subject_id' => 3,
+            ],
+            [
+                'question' => 'When Container has a child, its size become as small as its child. How to make the Container as big as its parent?',
+                'choices' => [
+                    'Add alignment',
+                    'Add color',
+                    'Add padding',
+                ],
+                'correct_option' => 'Add alignment',
+                'subject_id' => 3,
+            ],
+            [
+                'question' => 'Which syntax is wrong for declaring a function in Dart?',
+                'choices' => [
+                    'var sum(a, b) => a + b;',
+                    'sum(a, b) => a + b;',
+                    'dynamic sum(a, b) => a + b;',
+                ],
+                'correct_option' => 'var sum(a, b) => a + b;',
+                'subject_id' => 3,
+            ],
+            [
+                'question' => 'Which code is correct to disable the scroll of a SingleChildScrollView?',
+                'choices' => [
+                    'Add physics: NeverScrollableScrollPhysics()',
+                    'Add disable : true',
+                    'Add scrollable : false',
+                ],
+                'correct_option' => 'Add physics: NeverScrollableScrollPhysics()',
+                'subject_id' => 3,
+            ],
+            [
+                'question' => 'When using “await” keyword, which another keyword is required?',
+                'choices' => [
+                    'async',
+                    'try catch',
+                    'var',
+                ],
+                'correct_option' => 'async',
+                'subject_id' => 3,
+            ],
+
+
 
         ];
         foreach($questions as $key=>$value) {
