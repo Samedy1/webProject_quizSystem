@@ -1,4 +1,6 @@
 @extends('admin.layouts.layout')
 @section('content')
-    <h1>Dashboard for admin - {{ Auth::user()->name }}</h1>
+    <div class="container">
+        <h1 class="heading">Welcome - {{ Auth::user()->name }}</h1>
+    </div>
 @endsection
