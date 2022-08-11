@@ -211,8 +211,8 @@
             <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
             <div class="contact-info">
               <h1>Phone</h1>
-              <h2>+1 234 123 1234</h2>
-              <h2>+1 234 123 1234</h2>
+              <h2>+855 88 111 123</h2>
+              <h2>+855 99 111 123</h2>
             </div>
           </div>
           <div class="contact-item">
