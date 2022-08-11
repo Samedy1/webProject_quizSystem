@@ -142,7 +142,7 @@
         <div class="col">
           <div class="about-img">
             <div class="item">
-              <img src="/img/welcome/team/samdy.jpg" alt="img">
+              <img src="/img/team/samdy.jpg" alt="img">
               <div class="inner">
                 <div class="info">
                     <h5>Phin Samdy</h5>
@@ -161,7 +161,7 @@
         <div class="col">
           <div class="about-img">
             <div class="item">
-              <img src="/img/welcome/team/sonai.jpg" alt="img">
+              <img src="/img/team/sonai.jpg" alt="img">
               <div class="inner">
                 <div class="info">
                     <h5>Kuy Sonai</h5>
@@ -180,7 +180,7 @@
         <div class="col">
           <div class="about-img">
             <div class="item">
-              <img src="/img/welcome/team/kanha.jpg" alt="img">
+              <img src="/img/team/kanha.jpg" alt="img">
               <div class="inner">
                 <div class="info">
                     <h5>Nov SOvankanha</h5>
@@ -219,15 +219,15 @@
             <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
             <div class="contact-info">
               <h1>Email</h1>
+              <h2>info@student/cadt.edu.kh</h2>
               <h2>info@gmail.com</h2>
-              <h2>abcd@gmail.com</h2>
             </div>
           </div>
           <div class="contact-item">
             <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
             <div class="contact-info">
               <h1>Address</h1>
-              <h2>Fatikchhari, Chittagong, Bangladesh</h2>
+              <h2>Bridge 2, National Road 6A, Sangkat Prek Leap, Khan Chroy Changva, Phnom Penh</h2>
             </div>
           </div>
         </div>
