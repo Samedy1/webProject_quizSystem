@@ -13,7 +13,7 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="subject_img" class="form-label text-lg">Subject Image</label>
-                    <input type="file" class="form-control border-secondary" name="subject_img" id="subject_img">
+                    <input type="file" class="form-control border-secondary" name="subject_img" id="subject_img" accept="image/*">
                 </div>
                 <div class="inputBx_subject_desc">
                     <label for="subject_desc">Subject Description</label>

@@ -28,15 +28,6 @@
                     </a>
                 </li>
 
-                {{-- <li>
-                    <a href="{{ route('admin.dashboard') }}">
-                        <span class="icon">
-                            <ion-icon name="home-outline"></ion-icon>
-                        </span>
-                        <span class="title">Dashboard</span>
-                    </a>
-                </li> --}}
-
                 <li>
                     <a href="{{ route('admin.users') }}">
                         <span class="icon">
@@ -81,7 +72,7 @@
                 </div>
 
                 <div class="user">
-                    <img src="/img/user.png" alt="">
+                    <img src="/img/users/user.png" alt="">
                 </div>
 
                 <x-app-layout>
