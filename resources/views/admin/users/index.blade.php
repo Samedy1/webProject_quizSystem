@@ -16,6 +16,7 @@
               </tr>
             </thead>
             <tbody>
+                @php $total_user = 0; @endphp
                 @foreach ($users as $user)
                 <tr>
                     <th scope="row">{{ $loop->index + 1 }}</td>
@@ -23,9 +24,11 @@
                     <td>{{ $user->email}}</td>
                     <td>{{ $user->created_at}}</td>
                 </tr>
+                @php $total_user++ @endphp
             @endforeach
             </tbody>
           </table>
+          <div class="mt-5 h4">Total user: {{ $total_user }}</div>
     </div>
 </div>
 @endsection
