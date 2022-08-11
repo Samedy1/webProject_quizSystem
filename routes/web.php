@@ -42,9 +42,6 @@ Route::get('/dashboard', function () {
 });
 
 
-Route::get('/subjects', [SubjectController::class, 'index'])->name('subjects.index');
-
-
 Route::middleware([Authenticate::class, Admin::class])->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard.index');
@@ -73,20 +70,21 @@ Route::middleware([Authenticate::class, Admin::class])->group(function () {
 
 Route::middleware([Authenticate::class])->group(function () {
 
+    Route::get('/subjects', [SubjectController::class, 'index'])->name('subjects.index');
+
+
+    Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);
+    Route::post('/questions/result', [QuestionController::class, 'result']);
+
+
+    Route::get('/histories/{user_id}', [HistoryController::class, 'index'])->name('histories.index');
+    Route::post('/histories/store/{subject_id}/{user_id}', [HistoryController::class, 'store'])->name('histories.store');
+    Route::get('/histories/{user_id}/show/{history_id}', [HistoryController::class, 'show'])->name('histories.show');
+    Route::delete('/histories/{user_id}/destroy/{history_id}', [HistoryController::class, 'destroy'])->name('histories.destroy');
+    Route::delete('/histories/{user_id}/clear', [HistoryController::class, 'clear'])->name('histories.clear');
+
     Route::get('/settings', function () {
         return view('settings.index');
     });
 });
 
-Route::get('/questions/{subject_id}', [QuestionController::class, 'index']);
-Route::post('/questions/result', [QuestionController::class, 'result']);
-
-
-
-
-
-Route::get('/histories/{user_id}', [HistoryController::class, 'index'])->name('histories.index');
-Route::post('/histories/store/{subject_id}/{user_id}', [HistoryController::class, 'store'])->name('histories.store');
-Route::get('/histories/{user_id}/show/{history_id}', [HistoryController::class, 'show'])->name('histories.show');
-Route::delete('/histories/{user_id}/destroy/{history_id}', [HistoryController::class, 'destroy'])->name('histories.destroy');
-Route::delete('/histories/{user_id}/clear', [HistoryController::class, 'clear'])->name('histories.clear');

@@ -118,7 +118,7 @@ class QuestionsTableSeeder extends Seeder
                 'subject_id' => 1,
             ],
             [
-                'question' => 'int fun(int n)
+                'question' => 'What is time complexity of fun()? int fun(int n)
                 {
                   int count = 0;
                   for (int i = n; i > 0; i /= 2)
@@ -134,17 +134,6 @@ class QuestionsTableSeeder extends Seeder
                 ],
                 'correct_option' => 'O(n)',
                 'subject_id' => 1,
-            ],
-            [
-                'question' => '',
-                'choices' => [
-                    '',
-                    '',
-                    '',
-                    '',
-                ],
-                'correct_option' => '',
-                'subject_id' => 2,
             ],
             [
                 'question' => 'Which term describes the text that appears inside the angle brackets, such as <title>?',

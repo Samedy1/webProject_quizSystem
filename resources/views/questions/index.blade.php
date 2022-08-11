@@ -13,7 +13,7 @@
                     @foreach($question->choices as $choice)
                     <div class="question-user-choice p-4">
                         <input type="radio" id="{{ $question->id }}-{{ $choice }}" name="selected_choice{{$question->id}}" value="{{ $choice }}" required>
-                        <label for="{{ $question->id }}-{{ $choice }}">{{ $choice }} - selected_choice{{$question->id}}</label><br>
+                        <label for="{{ $question->id }}-{{ $choice }}">{{ $choice }}</label><br>
                     </div>
                     @endforeach
                 </div>

@@ -45,7 +45,7 @@ class HistoryController extends Controller
             $correct_options[$i] = $question->correct_option;
 
             if ($selected_choices[$i] == $correct_options[$i]) {
-                $score++;
+                $score = $score + 100/count($questions);
             }
             $i++;
         }
