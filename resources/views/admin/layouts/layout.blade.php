@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="user">
-                    <img src="/img/users/user.png" alt="">
+                    <img src="/img/users/{{ Auth::user()->user_img }}" alt="">
                 </div>
 
                 <x-app-layout>
