@@ -11,8 +11,8 @@
                         {{ $loop->index + 1}}. {{ $question->question }}<br>
                     </div>
                     <div class="">
-                        <div class="ml-5">Your choice: {{ $info['history']->selected_choices[$loop->index] }}</div>
-                        <div class="ml-5">Correct choice: {{ $question->correct_option }}</div>
+                        <div class="ml-5 mb-2"><span style="text-decoration: underline;">Your choice:</span> {{ $info['history']->selected_choices[$loop->index] }}</div>
+                        <div class="ml-5 mb-2"><span style="text-decoration: underline;">Correct choice:</span> {{ $question->correct_option }}</div>
                     </div>
                 </div>
             @endforeach
