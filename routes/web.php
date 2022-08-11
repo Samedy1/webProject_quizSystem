@@ -37,9 +37,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-});
+
 
 
 Route::middleware([Authenticate::class, Admin::class])->group(function () {
@@ -69,6 +67,9 @@ Route::middleware([Authenticate::class, Admin::class])->group(function () {
 });
 
 Route::middleware([Authenticate::class])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard.index');
+    });
 
     Route::get('/subjects', [SubjectController::class, 'index'])->name('subjects.index');
 
