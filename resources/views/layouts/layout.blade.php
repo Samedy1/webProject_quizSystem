@@ -84,9 +84,9 @@
                     {{-- <ion-icon name="search-outline"></ion-icon> --}}
                 </label>
             </div>
-            {{-- <div class="user">
-                <img src="/storage/img/settings/user.png" alt="">
-            </div> --}}
+            <div class="user">
+                <img src="/img/users/{{Auth::user()->user_img}}" alt="">
+            </div>
             <x-app-layout>
             </x-app-layout>
             <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
