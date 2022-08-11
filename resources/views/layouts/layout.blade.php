@@ -56,7 +56,7 @@
             </li> --}}
 
             <li>
-                <a href="/settings">
+                <a href="{{ route('settings.edit', Auth::user()->id) }}">
                     <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                     <span class="title">Settings</span>
                 </a>

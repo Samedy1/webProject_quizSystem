@@ -83,8 +83,7 @@ Route::middleware([Authenticate::class])->group(function () {
     Route::delete('/histories/{user_id}/destroy/{history_id}', [HistoryController::class, 'destroy'])->name('histories.destroy');
     Route::delete('/histories/{user_id}/clear', [HistoryController::class, 'clear'])->name('histories.clear');
 
-    Route::get('/settings', function () {
-        return view('settings.index');
-    });
+    Route::get('/settings/{user_id}', [UserController::class, 'edit'])->name('settings.edit');
+    Route::post('/settings/{user_id}/update', [UserController::class, 'update'])->name('settings.update');
 });
 

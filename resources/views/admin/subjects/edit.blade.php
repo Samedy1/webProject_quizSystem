@@ -4,8 +4,6 @@
     <form action="{{ route('admin.subjects.update', $subject->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
 
-        <input type="checkbox" id="subject_id" name="subject_id" checked value="{{ $subject->id }}" style="display:none;">
-
         <div class="containBx_subject">
             <div class="form_subjectBx">
                 
