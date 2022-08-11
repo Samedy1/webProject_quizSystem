@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <div class="setting-box" style="height: 350px;">
-        <img src="/img/users/user.png" class="mb-5">
+        <img src="/img/users/{{ Auth::user()->user_img }}" class="mb-5">
 
         <form action="{{ route('password.update', Auth::user()->id ) }}" method="POST" enctype="multipart/form-data">
             @csrf

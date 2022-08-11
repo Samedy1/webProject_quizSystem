@@ -26,7 +26,11 @@ class UserController extends Controller
         $user->email = request('user_email');
         
         if ($request->hasFile('user_img')) {
-
+            $destination_path = public_path()."/img/users";
+            $image = $request->file('user_img');
+            $image_name = $image->getClientOriginalName();
+            $image->move($destination_path, $image_name);
+            $user->user_img = $image_name;
         } 
 
         $user->save();

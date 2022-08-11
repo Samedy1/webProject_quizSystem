@@ -3,7 +3,7 @@
     <div class="setting-box">
         <form action="{{ route('settings.update', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <img src="/img/users/user.png">
+            <img src="/img/users/{{Auth::user()->user_img}}">
             <input type="file" name="user_img" id="file" accept="image/*">
             <label for="file">Edit Pic</label>
             <input type="text" name="user_name" placeholder="User Name" value="{{ $user->name }}" required>
