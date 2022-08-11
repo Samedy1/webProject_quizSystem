@@ -88,5 +88,9 @@ Route::middleware([Authenticate::class])->group(function () {
     });
     Route::get('/settings/{user_id}', [UserController::class, 'edit'])->name('settings.edit');
     Route::post('/settings/{user_id}/update', [UserController::class, 'update'])->name('settings.update');
+
+    Route::get('/password/{user_id}', function() {
+        return view('password.edit');
+    })->name('password.edit');
 });
 

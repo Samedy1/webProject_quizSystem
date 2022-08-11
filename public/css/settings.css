@@ -24,13 +24,15 @@
   width: 110px;
   height: 110px;
 }
+
 .setting-box input[type="text"]{
     margin-top: 25px;
     border: 5px solid var(--crimson);
 }
 .setting-box input[type="text"],
 .setting-box input[type="date"],
-.setting-box input[type="email"]{
+.setting-box input[type="email"],
+.setting-box input[type="password"]{
     display: block;
     box-sizing: border-box;
     background: none;

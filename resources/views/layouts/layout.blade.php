@@ -63,7 +63,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{{ route('password.edit', Auth::user()->id) }}">
                     <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
                     <span class="title">Password</span>
                 </a>
