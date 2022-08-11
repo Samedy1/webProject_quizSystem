@@ -180,10 +180,10 @@
         <div class="col">
           <div class="about-img">
             <div class="item">
-              <img src="/img/team/kanha.jpg" alt="img">
+              <img src="/img/welcome/team/kanha.jpg" alt="img">
               <div class="inner">
                 <div class="info">
-                    <h5>Nov SOvankanha</h5>
+                    <h5>Nov Svvankanha</h5>
                     <p>Girl</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=100005593997000"><span class="fa fa-facebook"></span></a>
