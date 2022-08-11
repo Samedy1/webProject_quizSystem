@@ -180,7 +180,7 @@
         <div class="col">
           <div class="about-img">
             <div class="item">
-              <img src="/img/welcome/team/kanha.jpg" alt="img">
+              <img src="/img/team/kanha.jpg" alt="img">
               <div class="inner">
                 <div class="info">
                     <h5>Nov SOvankanha</h5>
