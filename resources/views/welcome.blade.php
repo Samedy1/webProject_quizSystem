@@ -184,7 +184,7 @@
               <div class="inner">
                 <div class="info">
                     <h5>Nov SOvankanha</h5>
-                    <p>Bek SLoy Girl</p>
+                    <p>Girl</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=100005593997000"><span class="fa fa-facebook"></span></a>
                         <a href=""><span class="fa fa-instagram"></span></a>
