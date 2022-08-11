@@ -27,7 +27,6 @@ class SubjectController extends Controller
         $subject = new Subject();
         
         if ($request->hasFile('subject_img')) {
-            $subject = new Subject();
             $destination_path = public_path()."/img/subjects";
             // error_log(public_path());
             $image = $request->file('subject_img');
@@ -74,11 +73,20 @@ class SubjectController extends Controller
         return view('admin.subjects.edit', ['subject' => $subject]);
     }
 
-    public function update($subject_id) {
+    public function update(Request $request, $subject_id) {
         $subject = Subject::findOrFail($subject_id);
 
         $subject->name = request('subject_name');
         $subject->description = request('subject_desc');
+        
+        if ($request->hasFile('subject_img')) {
+            $destination_path = public_path()."/img/subjects";
+            $image = $request->file('subject_img');
+            $image_name = $image->getClientOriginalName();
+            // $path = $request->file('subject_img')->storeAs($destination_path, $image_name);
+            $image->move($destination_path, $image_name);
+            $subject->img = $image_name;
+        } 
 
         $subject->save();
         return redirect('admin/subjects');

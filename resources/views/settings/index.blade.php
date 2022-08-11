@@ -1,13 +1,16 @@
 @extends('layouts.layout')
 @section('content')
     <div class="setting-box">
-        <img src="/img/settings/user.png">
-        <input type="file" name="" id="file" accept="image/*">
-        <label for="file">Edit Pic</label>
-        <input type="text" name="" placeholder="User Name">
-        <input type="email" name="" placeholder="Email Address">
-        <button style="float: left; margin: 10px 30px 10px 0">CANCEL</button>
-        <button style="float: left; margin: 10px 0 10px 130px">DONE</button>
+        <form action="">
+            <img src="/img/settings/user.png">
+            <input type="file" name="" id="file" accept="image/*">
+            <label for="file">Edit Pic</label>
+            <input type="text" name="" placeholder="User Name">
+            <input type="email" name="" placeholder="Email Address">
+            <button style="float: left; margin: 10px 30px 10px 0">CANCEL</button>
+            <button style="float: left; margin: 10px 0 10px 130px">DONE</button>
+        </form>
+        
     </div>
     <div id="theme-open" class="fa-solid fa-angle-left"></div>
     <div class="themes-container">
